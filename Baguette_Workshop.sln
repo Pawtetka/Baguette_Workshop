@@ -4,8 +4,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baguette_Workshop_Interface", "Baguette_Workshop_Interface\Baguette_Workshop_Interface.csproj", "{6CBE3B56-9D5D-4B2F-987B-262B1041AB4E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8EB191C8-EA10-4C0B-9E64-061005E6F595} = {8EB191C8-EA10-4C0B-9E64-061005E6F595}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baguette_Workshop_BLL", "Baguette_Workshop_BLL\Baguette_Workshop_BLL.csproj", "{8EB191C8-EA10-4C0B-9E64-061005E6F595}"
+	ProjectSection(ProjectDependencies) = postProject
+		{35007AED-A5A4-47A2-A92C-BCCD8AD1EEA6} = {35007AED-A5A4-47A2-A92C-BCCD8AD1EEA6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baguette_Workshop_DAL", "Baguette_Workshop_DAL\Baguette_Workshop_DAL.csproj", "{35007AED-A5A4-47A2-A92C-BCCD8AD1EEA6}"
 EndProject
