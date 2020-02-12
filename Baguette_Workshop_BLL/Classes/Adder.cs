@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Baguette_Workshop_BLL.Classes
 {
-    class Adder : IOrderAdder
+    public class Adder : IOrderAdder
     {
         private Dictionary<string, string> orderInfo;
         private Order order;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Baguette_Workshop_BLL.Interfaces
 {
-    interface IOrderAdder
+    public interface IOrderAdder
     {
         void AddNewOrder(Dictionary<string, string> orderInfo);
     }

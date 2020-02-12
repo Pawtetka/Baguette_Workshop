@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Baguette_Workshop_BLL.Classes.Adder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAEAAEAAQAIQAAUEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Adder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Baguette_Workshop_BLL.Classes.Baguette" Collapsed="true">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAABAAAAAAgAAAAAEAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Classes\Baguette.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baguette_Workshop_BLL.Classes.BaguettePriceCounter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Classes\BaguettePriceCounter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Baguette_Workshop_BLL.Classes.Material" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Material.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baguette_Workshop_BLL.Classes.Order" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAEAAAAIQABAIAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Baguette_Workshop_BLL.Classes.OrderPriceCounter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAACQAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\OrderPriceCounter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Baguette_Workshop_BLL.Classes.Printer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Classes\Printer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Baguette_Workshop_BLL.Classes.Shop" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAABAAAAAAAAQAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Shop.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Adder" />
+      <Property Name="_Printer" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Baguette_Workshop_BLL.Classes.ShopInfo" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\ShopInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Baguette_Workshop_BLL.Interfaces.ICounter" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICounter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Baguette_Workshop_BLL.Interfaces.IOrderAdder" Collapsed="true">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IOrderAdder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Baguette_Workshop_BLL.Interfaces.IPrinter" Collapsed="true">
+    <Position X="10.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IPrinter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Baguette_Workshop_BLL.Interfaces.IShop" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IShop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

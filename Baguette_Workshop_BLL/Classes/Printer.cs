@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Baguette_Workshop_BLL.Classes
 {
-    class Printer : IPrinter
+    public class Printer : IPrinter
     {
         private List<string> printText;
         public Printer() { }

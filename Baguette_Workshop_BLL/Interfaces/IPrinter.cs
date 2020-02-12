@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Baguette_Workshop_BLL.Interfaces
 {
-    interface IPrinter
+    public interface IPrinter
     {
         List<string> ReturnOrders(string id);
     }

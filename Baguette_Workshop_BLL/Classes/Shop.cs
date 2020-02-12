@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Baguette_Workshop_BLL.Classes
 {
-    class Shop : IShop
+    public class Shop : IShop
     {
         private IOrderAdder _Adder { get; set; }
         private IPrinter _Printer { get; set; }
