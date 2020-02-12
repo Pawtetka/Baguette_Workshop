@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Baguette_Workshop_DAL.Interfaces
 {
-    interface ISerializator
+    public interface ISerializator
     {
         void Serialization(Object obj, string path);
         Object Deserialization(string path);

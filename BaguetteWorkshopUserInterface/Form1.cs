@@ -15,6 +15,7 @@ namespace BaguetteWorkshopUserInterface
     public partial class Form1 : Form
     {
         static IShop shop = new Shop(new Adder(), new Printer());
+        public static readonly string jsonPath = @"C:\Users\PashkaPustik\Desktop\TRPZ_Baguette\Baguette_Workshop\Shop.json";
         public Form1()
         {
             InitializeComponent();
@@ -43,6 +44,17 @@ namespace BaguetteWorkshopUserInterface
             orderInfo.Add("Count:", txt_Count.Text);
             orderInfo.Add("Surname:", txt_Surname.Text);
             return orderInfo;
+        }
+
+        private void Serialize()
+        {
+            ISerialization serializator = new Serialization();
+            serializator.Serialize(shop, jsonPath);
+        }
+        private Object Deserialize()
+        {
+            ISerialization serializator = new Serialization();
+            return serializator.Deserialize(jsonPath);
         }
     }
 }

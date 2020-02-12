@@ -5,16 +5,16 @@ using System.Text;
 
 namespace Baguette_Workshop_DAL.Classes
 {
-    class Serializator<T>
+    public class Serializator<T>
     {
         private ISerializator ser;
         public Serializator(ISerializator serial)
         {
             ser = serial;
         }
-        public void Serialize(T shop, string path)
+        public void Serialize(T obj, string path)
         {
-            ser.Serialization(shop, path);
+            ser.Serialization(obj, path);
         }
 
         public T Deserialize(string path)

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Baguette_Workshop_DAL.Classes
 {
-    class JsonSerializator : ISerializator
+    public class JsonSerializator : ISerializator
     {
         DataContractJsonSerializer jsonSerializer;
         public JsonSerializator(Type type)
