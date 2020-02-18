@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Baguette_Workshop_BLL.Interfaces;
-using Baguette_Workshop_BLL.Classes;
+using BLL_new.Interfaces;
+using BLL_new.Classes;
 
 namespace BaguetteWorkshopUserInterface
 {
     public partial class Form1 : Form
     {
-        static IShop shop = new Shop(new Adder(), new Printer());
         public static readonly string jsonPath = @"C:\Users\PashkaPustik\Desktop\TRPZ_Baguette\Baguette_Workshop\Shop.json";
         public Form1()
         {
@@ -23,30 +22,19 @@ namespace BaguetteWorkshopUserInterface
 
         private void btn_AddOrder_Click(object sender, EventArgs e)
         {
-            shop.AddNewOrder(ReadOrderInfo());
+            txt_Price.Text = Convert.ToString(Program.container.GetShop().CountBaguettePrice(txt_Type.Text, Convert.ToDouble(txt_Width.Text), Convert.ToDouble(txt_Height.Text)));
         }
 
-        private void btn_PrintOrder_Click(object sender, EventArgs e)
-        {
-            txt_PrintOrders.Text = null;
-            foreach (string str in shop.ReturnOrders("White_Horse"))
-            {
-                txt_PrintOrders.Text += str;
-            }
-        }
-
-        private Dictionary<string, string> ReadOrderInfo()
+        /*private Dictionary<string, string> ReadOrderInfo()
         {
             Dictionary<string, string> orderInfo = new Dictionary<string, string>();
             orderInfo.Add("Baguette_type:", txt_Type.Text);
             orderInfo.Add("Width:", txt_Width.Text);
             orderInfo.Add("Height:", txt_Height.Text);
-            orderInfo.Add("Count:", txt_Count.Text);
-            orderInfo.Add("Surname:", txt_Surname.Text);
             return orderInfo;
-        }
+        }*/
 
-        private void Serialize()
+        /*private void Serialize()
         {
             ISerialization serializator = new Serialization();
             serializator.Serialize(shop, jsonPath);
@@ -55,6 +43,6 @@ namespace BaguetteWorkshopUserInterface
         {
             ISerialization serializator = new Serialization();
             return serializator.Deserialize(jsonPath);
-        }
+        }*/
     }
 }

@@ -12,10 +12,10 @@ namespace BLL_new.Classes
         public IChooser Chooser { get; set; }
 
         public Shop() { }
-        public Shop(IPriceCounter counter, IChooser chooser)
+        public Shop(IPriceCounter counter)
         {
             PriceCounter = counter;
-            Chooser = chooser;
+            //Chooser = chooser;
         }
 
         public double CountBaguettePrice(string type, double width, double height)

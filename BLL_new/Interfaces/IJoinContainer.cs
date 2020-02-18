@@ -4,8 +4,8 @@ using System.Text;
 
 namespace BLL_new.Interfaces
 {
-    public interface IShop
+    public interface IJoinContainer
     {
-        double CountBaguettePrice(string type, double width, double height);
+        IShop GetShop();
     }
 }

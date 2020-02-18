@@ -80,9 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Baguette_Workshop_BLL\Baguette_Workshop_BLL.csproj">
-      <Project>{8eb191c8-ea10-4c0b-9e64-061005e6f595}</Project>
-      <Name>Baguette_Workshop_BLL</Name>
+    <ProjectReference Include="..\BLL_new\BLL_new.csproj">
+      <Project>{1c79c7db-c5c1-47fd-938c-b74b39a5ba62}</Project>
+      <Name>BLL_new</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
