@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaguetteWorkshopUserInterfa
 		{8EB191C8-EA10-4C0B-9E64-061005E6F595} = {8EB191C8-EA10-4C0B-9E64-061005E6F595}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_new", "BLL_new\BLL_new.csproj", "{1C79C7DB-C5C1-47FD-938C-B74B39A5BA62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FB7D8B98-41FE-4D70-9272-0E84E557B8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB7D8B98-41FE-4D70-9272-0E84E557B8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB7D8B98-41FE-4D70-9272-0E84E557B8EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C79C7DB-C5C1-47FD-938C-B74B39A5BA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C79C7DB-C5C1-47FD-938C-B74B39A5BA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C79C7DB-C5C1-47FD-938C-B74B39A5BA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C79C7DB-C5C1-47FD-938C-B74B39A5BA62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
