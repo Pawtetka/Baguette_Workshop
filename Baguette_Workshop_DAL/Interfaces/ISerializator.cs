@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Baguette_Workshop_DAL.Interfaces
 {
-    public interface ISerializator
+    public interface ISerializator<T>
     {
-        void Serialization(Object obj, string path);
-        Object Deserialization(string path);
+        void Serialization(T obj, string path);
+        T Deserialization(string path);
     }
 }

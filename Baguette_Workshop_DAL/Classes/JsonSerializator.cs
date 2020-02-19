@@ -9,25 +9,25 @@ using System.Collections.Specialized;
 
 namespace Baguette_Workshop_DAL.Classes
 {
-    public class JsonSerializator : ISerializator
+    public class JsonSerializator<T> : ISerializator<T>
     {
         DataContractJsonSerializer jsonSerializer;
         public JsonSerializator(Type type)
         {
             jsonSerializer = new DataContractJsonSerializer(type);
         }
-        public void Serialization(Object obj, string path)
+        public void Serialization(T obj, string path)
         {
             using (FileStream stream = new FileStream(path, FileMode.Create))
             {
                 jsonSerializer.WriteObject(stream, obj);
             }
         }
-        public Object Deserialization(string path)
+        public T Deserialization(string path)
         {
             using (FileStream stream = new FileStream(path, FileMode.OpenOrCreate))
             {
-                return jsonSerializer.ReadObject(stream);
+                return (T)jsonSerializer.ReadObject(stream);
             }
         }
 

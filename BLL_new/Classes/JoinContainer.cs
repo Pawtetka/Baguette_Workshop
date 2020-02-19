@@ -13,6 +13,7 @@ namespace BLL_new.Classes
         public JoinContainer()
         {
             priceCounter = new OrderPriceCounter();
+            chooser = new BaguetteChooser();
             shop = new Shop(priceCounter, chooser);
         }
 
