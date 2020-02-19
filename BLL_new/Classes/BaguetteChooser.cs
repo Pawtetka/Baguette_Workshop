@@ -5,10 +5,17 @@ using System.Text;
 
 namespace BLL_new.Classes
 {
-    class BaguetteChooser : IChooser
+    class BaguetteChooser : IChooser<Baguette>
     {
-        public object ChooseObject(List<Object> baguettes, string param)
+        public Baguette ChooseObject(List<Baguette> baguettes, string param)
         {
+            foreach (Baguette bag in baguettes)
+            {
+                if (bag.baguetteType.Equals(param))
+                {
+                    return bag;
+                }
+            }
             return null;
         }
     }

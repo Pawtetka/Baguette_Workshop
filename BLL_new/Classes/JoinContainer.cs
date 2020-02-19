@@ -9,10 +9,11 @@ namespace BLL_new.Classes
     {
         private IShop shop;
         private IPriceCounter priceCounter;
+        private IChooser<Baguette> chooser;
         public JoinContainer()
         {
             priceCounter = new OrderPriceCounter();
-            shop = new Shop(priceCounter);
+            shop = new Shop(priceCounter, chooser);
         }
 
         public IShop GetShop()

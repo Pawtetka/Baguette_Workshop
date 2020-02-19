@@ -9,13 +9,13 @@ namespace BLL_new.Classes
     {
         private List<Baguette> baguettes;
         public IPriceCounter PriceCounter { get; set; }
-        public IChooser Chooser { get; set; }
+        public IChooser<Baguette> Chooser { get; set; }
 
         public Shop() { }
-        public Shop(IPriceCounter counter)
+        public Shop(IPriceCounter counter, IChooser<Baguette> chooser)
         {
             PriceCounter = counter;
-            //Chooser = chooser;
+            Chooser = chooser;
         }
 
         public double CountBaguettePrice(string type, double width, double height)
@@ -24,14 +24,7 @@ namespace BLL_new.Classes
         }
         private Baguette ChooseBaguette(string type)
         {
-            foreach (Baguette bag in baguettes)
-            {
-                if (bag.baguetteType.Equals(type)) 
-                {
-                    return bag;
-                }
-            }
-            return null;
+            return Chooser.ChooseObject(baguettes, type);
         }
     }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace BLL_new.Interfaces
 {
-    interface IChooser
+    interface IChooser<T>
     {
-        Object ChooseObject(List<Object> objects, string param);
+        T ChooseObject(List<T> objects, string param);
     }
 }

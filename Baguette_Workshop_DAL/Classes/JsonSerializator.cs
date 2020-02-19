@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Text;
+using System.Configuration;
+using System.Collections.Specialized;
 
 namespace Baguette_Workshop_DAL.Classes
 {
