@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Baguette_Workshop_DAL.Interfaces
 {
-    public interface ISerializeController<T>
+    public interface IContainerSer<T>
     {
-        T Deserialize();
-        void Serialize(T obj);
+        ISerializeController<T> GetSerializeController();
     }
 }

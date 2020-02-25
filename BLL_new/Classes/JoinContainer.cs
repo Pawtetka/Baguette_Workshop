@@ -10,11 +10,12 @@ namespace BLL_new.Classes
         private IShop shop;
         private IPriceCounter priceCounter;
         private IChooser<Baguette> chooser;
-        public JoinContainer()
+
+        public JoinContainer(string path)
         {
             priceCounter = new OrderPriceCounter();
             chooser = new BaguetteChooser();
-            shop = new Shop(priceCounter, chooser);
+            shop = new Shop(priceCounter, chooser, path);
         }
 
         public IShop GetShop()

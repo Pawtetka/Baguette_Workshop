@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Baguette_Workshop_DAL\Baguette_Workshop_DAL.csproj" />
+  </ItemGroup>
+
 </Project>
