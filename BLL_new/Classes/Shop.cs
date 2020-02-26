@@ -11,9 +11,10 @@ namespace BLL_new.Classes
     class Shop : IShop
     {
         private List<Baguette> baguettes;
-        public IPriceCounter PriceCounter { get; set; }
-        public IChooser<Baguette> Chooser { get; set; }
+        public IPriceCounter PriceCounter { get; }
+        public IChooser<Baguette> Chooser { get; }
         public IContainerSer<Shop> Container { get; }
+        public DataAccesser<IShop> Accessor { get; }
 
         public Shop() { }
         public Shop(IPriceCounter counter, IChooser<Baguette> chooser, string path)
