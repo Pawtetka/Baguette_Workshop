@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BLL_new.Classes
 {
-    class Material
+    public class Material
     {
         public double Price {get;}
         public Material() { }

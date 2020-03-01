@@ -16,7 +16,7 @@ namespace BLL_new.Classes
                     return bag;
                 }
             }
-            return null;
+            return new Baguette() ;
         }
     }
 }

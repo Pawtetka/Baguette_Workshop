@@ -11,6 +11,7 @@ namespace BLL_new.Classes
         private Order _order;
         public double CountPrice(Object order)
         {
+            price = 0;
             _order = order as Order;
             CountMaterialsPrice(_order.baguette);
             price *= _order.width * _order.height;

@@ -22,6 +22,7 @@ namespace BLL_new.Classes
             PriceCounter = counter;
             Chooser = chooser;
             Container = new SerContainer<Shop>(path);
+            baguettes = LoadData.LoadBaguettes();
         }
 
         public double CountBaguettePrice(string type, double width, double height)

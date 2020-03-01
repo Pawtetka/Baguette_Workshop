@@ -16,7 +16,7 @@ namespace BaguetteWorkshopUserInterface
     public partial class Form1 : Form
     {
         //public static readonly string jsonPath = @"C:\Users\PashkaPustik\Desktop\TRPZ_Baguette\Baguette_Workshop\Shop.json";
-        //public static readonly string jsonPath = ConfigurationManager.AppSettings.Get("Serialize path");
+        public static readonly string jsonPath = ConfigurationManager.AppSettings.Get("Serialize path");
         public Form1()
         {
             InitializeComponent();

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace BLL_new.Classes
 {
-    class Baguette
+    public class Baguette
     {
-        public Dictionary<Material, int> materials { get; }
+        public Dictionary<Material, int> materials { get; set; } = new Dictionary<Material, int>();
         public readonly string baguetteType;
         public Baguette() { }
         public Baguette(string type)

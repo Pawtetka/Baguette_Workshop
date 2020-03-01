@@ -16,6 +16,7 @@ namespace Baguette_Workshop_DAL.Classes
         }
         public ISerializeController<T> GetSerializeController()
         {
+            
             return serializeController;
         }
     }
