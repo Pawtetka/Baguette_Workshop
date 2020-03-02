@@ -13,7 +13,7 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="106,84,0,0" TextWrapping="Wrap" Text="{Binding Width, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="164"/>
         <Label Content="Height" HorizontalAlignment="Left" Margin="19,140,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="106,144,0,0" TextWrapping="Wrap" Text="{Binding Height}" VerticalAlignment="Top" Width="164"/>
-        <Button Content="Count Price" HorizontalAlignment="Left" Margin="90,200,0,0" VerticalAlignment="Top" Width="116" Height="31" Click="Button_Click"/>
+        <Button Content="Count Price" HorizontalAlignment="Left" Margin="90,200,0,0" VerticalAlignment="Top" Width="116" Height="31" Command="{Binding CountPriceCommand}"/>
         <Label Content="Price" HorizontalAlignment="Left" Margin="19,264,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="106,264,0,0" TextWrapping="Wrap" Text="{Binding Price, Mode=OneWay}" IsReadOnly="True" VerticalAlignment="Top" Width="164"/>
 

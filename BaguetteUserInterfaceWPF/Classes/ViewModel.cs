@@ -12,10 +12,9 @@ namespace BaguetteUserInterfaceWPF.Classes
     class ViewModel : INotifyPropertyChanged
     {
         private IModel _model;
-        public ViewModel(IModel model, MainWindow main)
+        public ViewModel(IModel model)
         {
             _model = model;
-            main.CountPrice += CountPrice;
         }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
@@ -30,17 +29,23 @@ namespace BaguetteUserInterfaceWPF.Classes
             OnPropertyChanged("Price");
         }
 
+        private RelayCommand _countPriceCommand;
+
+        public RelayCommand CountPriceCommand
+        {
+            get
+            {
+                return _countPriceCommand ?? (new RelayCommand(obj => 
+                {
+                    CountPrice();
+                }));
+            }
+        }
+
         private double _price;
         public string Price
         {
-            get => Convert.ToString(_price/*_model.GetPrice(Type, Width, Height)*/);
-            /*{
-                if (Type != null)
-                {
-                    return Convert.ToString(_model.GetPrice(Type, Width, Height));
-                }
-                else return Convert.ToString(_price);
-            }*/
+            get => Convert.ToString(_price);
             set { _price = Convert.ToDouble(value); }
         }
 

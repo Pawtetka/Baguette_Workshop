@@ -22,17 +22,11 @@ namespace BaguetteUserInterfaceWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public delegate void CountPriceDelegate();
-        public event CountPriceDelegate CountPrice;
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel(new Model(new JoinContainer()), this);
+            this.DataContext = new ViewModel(new Model(new JoinContainer()));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            CountPrice();
-        }
     }
 }
