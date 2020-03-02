@@ -33,5 +33,15 @@ namespace BLL_new.Classes
         {
             return Chooser.ChooseObject(baguettes, type);
         }
+
+        public List<string> GetBaguettes()
+        {
+            var types = new List<string>();
+            foreach (Baguette baguette in baguettes)
+            {
+                types.Add(baguette.baguetteType);
+            }
+            return types;
+        }
     }
 }

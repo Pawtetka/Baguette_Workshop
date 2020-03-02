@@ -49,6 +49,13 @@ namespace BaguetteUserInterfaceWPF.Classes
             set { _price = Convert.ToDouble(value); }
         }
 
+        private List<string> _types;
+        public List<string> Types
+        {
+            get => _model.getBaguetteTypes();
+            set { _types = value; }
+        }
+
         private string _type;
         private double _width;
         private double _height;

@@ -19,5 +19,9 @@ namespace BaguetteUserInterfaceWPF.Classes
         {
             return _joinContainer.GetShop().CountBaguettePrice(type, width, height);
         }
+        public List<string> getBaguetteTypes()
+        {
+            return _joinContainer.GetShop().GetBaguettes();
+        }
     }
 }
