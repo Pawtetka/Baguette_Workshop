@@ -9,6 +9,6 @@ namespace BaguetteUserInterfaceWPF.Interfaces
     interface IModel
     {
         double GetPrice(string type, double width, double height);
-        List<string> getBaguetteTypes();
+        List<string> GetBaguetteTypes();
     }
 }

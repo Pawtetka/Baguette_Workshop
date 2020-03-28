@@ -11,7 +11,7 @@ namespace BLL_new.Classes
         {
             foreach (Baguette bag in baguettes)
             {
-                if (bag.baguetteType.Equals(param))
+                if (bag.BaguetteType.Equals(param))
                 {
                     return bag;
                 }

@@ -22,7 +22,7 @@ namespace BLL_new.Classes
             PriceCounter = counter;
             Chooser = chooser;
             Container = new SerContainer<Shop>(path);
-            baguettes = new MackAllBaguettes().baguettes/*LoadData.LoadBaguettes()*/;
+            baguettes = /*new MackAllBaguettes().baguettes*/LoadData.LoadBaguettes();
         }
 
         public double CountBaguettePrice(string type, double width, double height)
@@ -39,7 +39,7 @@ namespace BLL_new.Classes
             var types = new List<string>();
             foreach (Baguette baguette in baguettes)
             {
-                types.Add(baguette.baguetteType);
+                types.Add(baguette.BaguetteType);
             }
             return types;
         }

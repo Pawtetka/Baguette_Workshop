@@ -52,7 +52,7 @@ namespace BaguetteUserInterfaceWPF.Classes
         private List<string> _types;
         public List<string> Types
         {
-            get => _model.getBaguetteTypes();
+            get => _model.GetBaguetteTypes();
             set { _types = value; }
         }
 

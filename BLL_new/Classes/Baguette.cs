@@ -7,12 +7,13 @@ namespace BLL_new.Classes
 {
     public class Baguette
     {
-        public Dictionary<Material, int> materials { get; set; } = new Dictionary<Material, int>();
-        public readonly string baguetteType;
+        public int Id { get; set; }
+        public Dictionary<Material, int> Materials { get; set; } = new Dictionary<Material, int>();
+        public string BaguetteType { get; set; }
         public Baguette() { }
         public Baguette(string type)
         {
-            baguetteType = type;
+            BaguetteType = type;
         }
     }
 }
