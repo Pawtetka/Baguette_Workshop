@@ -8,8 +8,8 @@ namespace Baguette_Workshop_DAL.Interfaces
     interface IUnitOfWork
     {
         IBaguetteRepository<BaguetteModel> BaguetteRepository { get; }
-        IBaguetteMaterialRepository<BaguetteMaterialModel> BaguetteMaterialRepository { get; set; }
-        IMaterialRepository<MaterialModel> MaterialRepository { get; set; }
+        IBaguetteMaterialRepository<BaguetteMaterialModel> BaguetteMaterialRepository { get; }
+        IMaterialRepository<MaterialModel> MaterialRepository { get; }
         void Save();
     }
 }
