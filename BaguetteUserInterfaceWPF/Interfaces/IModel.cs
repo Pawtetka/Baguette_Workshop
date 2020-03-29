@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaguetteUserInterfaceWPF.Interfaces
 {
-    interface IModel
+    public interface IModel
     {
         double GetPrice(string type, double width, double height);
         List<string> GetBaguetteTypes();

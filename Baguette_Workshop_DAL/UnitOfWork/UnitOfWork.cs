@@ -7,7 +7,7 @@ using Baguette_Workshop_DAL.Repositories;
 
 namespace Baguette_Workshop_DAL.UnitOfWork
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationContext _context;
         private IBaguetteRepository<BaguetteModel> _baguetteRepository;

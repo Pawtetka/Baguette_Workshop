@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Baguette_Workshop_DAL.Interfaces
 {
-    interface IBaguetteRepository<BaguetteModel>
+    public interface IBaguetteRepository<BaguetteModel>
     {
         void Add(BaguetteModel baguetteModel);
         void Update(BaguetteModel baguetteModel);

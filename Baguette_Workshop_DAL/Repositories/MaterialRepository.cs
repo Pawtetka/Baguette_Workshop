@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Baguette_Workshop_DAL.Repositories
 {
-    class MaterialRepository : IMaterialRepository<MaterialModel>
+    public class MaterialRepository : IMaterialRepository<MaterialModel>
     {
         private DbSet<MaterialModel> _dbSet;
         public MaterialRepository(ApplicationContext context)

@@ -9,7 +9,7 @@ using System.Windows.Input;
 
 namespace BaguetteUserInterfaceWPF.Classes
 {
-    class ViewModel : INotifyPropertyChanged
+    public class ViewModel : INotifyPropertyChanged
     {
         private IModel _model;
         public ViewModel(IModel model)

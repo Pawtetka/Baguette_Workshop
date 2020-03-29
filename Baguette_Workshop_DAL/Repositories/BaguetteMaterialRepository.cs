@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace Baguette_Workshop_DAL.Repositories
 {
-    class BaguetteMaterialRepository : IBaguetteMaterialRepository<BaguetteMaterialModel>
+    public class BaguetteMaterialRepository : IBaguetteMaterialRepository<BaguetteMaterialModel>
     {
         private DbSet<BaguetteMaterialModel> _dbSet;
         public BaguetteMaterialRepository(ApplicationContext context)

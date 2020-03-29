@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaguetteUserInterfaceWPF.Interfaces
 {
-    interface IViewModel
+    public interface IViewModel
     {
     }
 }

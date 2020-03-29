@@ -25,7 +25,7 @@ namespace BaguetteUserInterfaceWPF
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel(new Model(new JoinContainer()));
+            //this.DataContext = new ViewModel(new Model(new JoinContainer()));
         }
 
     }

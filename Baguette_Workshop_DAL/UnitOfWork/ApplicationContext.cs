@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Baguette_Workshop_DAL.UnitOfWork
 {
-    class ApplicationContext : DbContext
+    public class ApplicationContext : DbContext
     {
         public DbSet<BaguetteModel> BaguetteModels { get; set; }
         public DbSet<MaterialModel> MaterialModels { get; set; }

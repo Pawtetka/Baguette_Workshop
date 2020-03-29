@@ -15,7 +15,7 @@ namespace BLL_new.Classes
         {
             priceCounter = new OrderPriceCounter();
             chooser = new BaguetteChooser();
-            shop = new Shop(priceCounter, chooser, "");
+            shop = new Shop(priceCounter, chooser);
         }
 
         public IShop GetShop()

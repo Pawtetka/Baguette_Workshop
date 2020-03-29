@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BLL_new.Interfaces
 {
-    interface IPriceCounter
+    public interface IPriceCounter
     {
         double CountPrice(Object obj);
     }

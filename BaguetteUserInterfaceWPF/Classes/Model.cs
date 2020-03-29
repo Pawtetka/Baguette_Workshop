@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace BaguetteUserInterfaceWPF.Classes
 {
-    class Model : IModel
+    public class Model : IModel
     {
-        private IJoinContainer _joinContainer;
-        public Model(IJoinContainer joinContainer)
+        private IShop _shop;
+        public Model(IShop shop)
         {
-            _joinContainer = joinContainer;
+            _shop = shop;
         }
         public double GetPrice(string type, double width, double height)
         {
-            return _joinContainer.GetShop().CountBaguettePrice(type, width, height);
+            return _shop.CountBaguettePrice(type, width, height);
         }
         public List<string> GetBaguetteTypes()
         {
-            return _joinContainer.GetShop().GetBaguettes();
+            return _shop.GetBaguettes();
         }
     }
 }

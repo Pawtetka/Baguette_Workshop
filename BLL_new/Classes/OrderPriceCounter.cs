@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BLL_new.Classes
 {
-    class OrderPriceCounter : IPriceCounter
+    public class OrderPriceCounter : IPriceCounter
     {
         private double _price;
         private Order _order;
