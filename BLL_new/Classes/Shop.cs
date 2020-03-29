@@ -22,7 +22,7 @@ namespace BLL_new.Classes
             priceCounter = counter;
             this.chooser = chooser;
             _baguetteService = baguetteService;
-            loader.LoadStartDataToBd();
+            //loader.LoadStartDataToBd();
             //baguettes = /*new MackAllBaguettes().baguettes*/LoadData.LoadBaguettes();
 
         }

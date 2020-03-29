@@ -24,16 +24,19 @@ namespace BLL_new.Services
             var baguetteMaterials = _mapper.Map<List<BaguetteMaterial>>(_unitOfWork.BaguetteMaterialRepository.GetAll());
             foreach(BaguetteMaterial bagMat in baguetteMaterials)
             {
-                if (bagMat.BaguetteId == id)
+                if (bagMat.BaguetteModel.Id == id)
                 {
-                    materials.Add(bagMat.Material, bagMat.Quantity);
+                    materials.Add(/*bagMat.MaterialModel*/_mapper.Map<Material>(_unitOfWork.MaterialRepository.GetById(bagMat.MaterialModelId)), bagMat.Quantity);
                 }
             }
             return materials;
         }
         public void AddBaguetteMaterial(BaguetteMaterial baguetteMaterial)
         {
-            _unitOfWork.BaguetteMaterialRepository.Add(_mapper.Map<BaguetteMaterialModel>(baguetteMaterial));
+            var baguetteModel = _mapper.Map<BaguetteMaterialModel>(baguetteMaterial);
+            baguetteModel.BaguetteModel = _mapper.Map<BaguetteModel>(baguetteMaterial.BaguetteModel);
+            baguetteModel.MaterialModel = _mapper.Map<MaterialModel>(baguetteMaterial.MaterialModel);
+            _unitOfWork.BaguetteMaterialRepository.Add(/*_mapper.Map<BaguetteMaterialModel>(baguetteMaterial)*/baguetteModel);
         }
     }
 }
