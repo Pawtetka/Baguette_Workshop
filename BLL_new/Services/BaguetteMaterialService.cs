@@ -10,9 +10,9 @@ namespace BLL_new.Services
 {
     public class BaguetteMaterialService
     {
-        private Mapper _mapper;
+        private IMapper _mapper;
         private IUnitOfWork _unitOfWork;
-        public BaguetteMaterialService(Mapper mapper, IUnitOfWork unitOfWork)
+        public BaguetteMaterialService(IMapper mapper, IUnitOfWork unitOfWork)
         {
             _mapper = mapper;
             _unitOfWork = unitOfWork;

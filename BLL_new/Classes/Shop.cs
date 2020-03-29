@@ -17,11 +17,12 @@ namespace BLL_new.Classes
         private BaguetteService _baguetteService;
 
         public Shop() { }
-        public Shop(IPriceCounter counter, IChooser<Baguette> chooser, BaguetteService baguetteService)
+        public Shop(IPriceCounter counter, IChooser<Baguette> chooser, BaguetteService baguetteService, LoadData loader)
         {
             priceCounter = counter;
             this.chooser = chooser;
             _baguetteService = baguetteService;
+            loader.LoadStartDataToBd();
             //baguettes = /*new MackAllBaguettes().baguettes*/LoadData.LoadBaguettes();
 
         }

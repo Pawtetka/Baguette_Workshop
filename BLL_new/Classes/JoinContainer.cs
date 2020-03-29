@@ -13,9 +13,9 @@ namespace BLL_new.Classes
 
         public JoinContainer()
         {
-            priceCounter = new OrderPriceCounter();
+            /*priceCounter = new OrderPriceCounter();
             chooser = new BaguetteChooser();
-            shop = new Shop(priceCounter, chooser);
+            shop = new Shop(priceCounter, chooser);*/
         }
 
         public IShop GetShop()

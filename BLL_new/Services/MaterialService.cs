@@ -10,9 +10,9 @@ namespace BLL_new.Services
 {
     public class MaterialService
     {
-        private Mapper _mapper;
+        private IMapper _mapper;
         private IUnitOfWork _unitOfWork;
-        public MaterialService(Mapper mapper, IUnitOfWork unitOfWork)
+        public MaterialService(IMapper mapper, IUnitOfWork unitOfWork)
         {
             _mapper = mapper;
             _unitOfWork = unitOfWork;

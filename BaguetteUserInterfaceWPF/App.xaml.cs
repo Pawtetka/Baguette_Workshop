@@ -16,6 +16,9 @@ using Baguette_Workshop_DAL.UnitOfWork;
 using Baguette_Workshop_DAL.Models;
 using Baguette_Workshop_DAL.Repositories;
 using AutoMapper;
+using BLL_new.Services;
+using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 namespace BaguetteUserInterfaceWPF
 {
@@ -27,7 +30,8 @@ namespace BaguetteUserInterfaceWPF
         private IServiceProvider serviceProvider;
         public App()
         {
-            var services = new ServiceCollection();
+            var connection = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            var services = new ServiceCollection().AddDbContext<ApplicationContext>(/*options => options.UseSqlServer(connection)*/);
             ConfigureServices(services);
             serviceProvider = services.BuildServiceProvider();
         }
@@ -45,6 +49,10 @@ namespace BaguetteUserInterfaceWPF
             services.AddScoped<IModel, Model>();
             services.AddScoped<ViewModel, ViewModel>();
             services.AddSingleton(new MapperConfiguration(c=>c.AddProfile(new AutoMapperProfile())).CreateMapper());
+            services.AddTransient<BaguetteService, BaguetteService>();
+            services.AddTransient<BaguetteMaterialService, BaguetteMaterialService>();
+            services.AddTransient<MaterialService, MaterialService>();
+            services.AddTransient<LoadData, LoadData>();
         }
         protected override void OnStartup(StartupEventArgs e)
         {
