@@ -1,4 +1,5 @@
 ﻿using BLL_new.Interfaces;
+using BLL_new.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,11 @@ namespace BLL_new.Classes
     {
         private double _price;
         private Order _order;
+        private BaguetteMaterialService _baguetteMaterialService;
+        public OrderPriceCounter(BaguetteMaterialService baguetteMaterialService)
+        {
+            _baguetteMaterialService = baguetteMaterialService;
+        }
         public double CountPrice(Object order)
         {
             _price = 0;
@@ -19,7 +25,7 @@ namespace BLL_new.Classes
         }
         private void CountMaterialsPrice(Baguette baguette)
         {
-            foreach(KeyValuePair<Material, int> mat in baguette.Materials)
+            foreach(KeyValuePair<Material, int> mat in _baguetteMaterialService.GetMaterialsByBaguette(baguette.Id))
             {
                 _price += mat.Key.Price * mat.Value;
             }

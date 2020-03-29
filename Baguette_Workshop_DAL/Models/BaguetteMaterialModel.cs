@@ -12,5 +12,6 @@ namespace Baguette_Workshop_DAL.Models
         public int MaterialModelId { get; set; }
         public BaguetteModel BaguetteModel { get; set; }
         public MaterialModel MaterialModel { get; set; }
+        public int Quantity { get; set; }
     }
 }

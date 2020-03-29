@@ -7,9 +7,9 @@ using Baguette_Workshop_DAL.Models;
 
 namespace BLL_new.Classes
 {
-    class AutoMapper : Profile
+    public class AutoMapperProfile : Profile
     {
-        public AutoMapper()
+        public AutoMapperProfile()
         {
             CreateMap<BaguetteModel, Baguette>().ReverseMap();
             CreateMap<MaterialModel, Material>().ReverseMap();

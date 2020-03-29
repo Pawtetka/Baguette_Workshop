@@ -15,6 +15,7 @@ using System.Windows;
 using Baguette_Workshop_DAL.UnitOfWork;
 using Baguette_Workshop_DAL.Models;
 using Baguette_Workshop_DAL.Repositories;
+using AutoMapper;
 
 namespace BaguetteUserInterfaceWPF
 {
@@ -43,6 +44,7 @@ namespace BaguetteUserInterfaceWPF
             services.AddSingleton<MainWindow, MainWindow>();
             services.AddScoped<IModel, Model>();
             services.AddScoped<ViewModel, ViewModel>();
+            services.AddSingleton(new MapperConfiguration(c=>c.AddProfile(new AutoMapperProfile())).CreateMapper());
         }
         protected override void OnStartup(StartupEventArgs e)
         {
